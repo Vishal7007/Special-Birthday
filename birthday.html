@@ -574,6 +574,12 @@
       </div>
 
       <button class="open-button">Open Birthday Card</button>
+      <audio id="magicSound" preload="auto">
+        <source src="audios/magic_sound.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="birthdaySong" preload="auto">
+        <source src="audios/Happy Birthday song.mp4" type="audio/mpeg" />
+      </audio>
     </div>
 
     <script>
@@ -588,6 +594,8 @@
 
         // Open button click handler
         openButton.addEventListener("click", function () {
+          document.getElementById("magicSound").play();
+          document.getElementById("birthdaySong").play();
           // First animation - open the envelope flap
           envelope.classList.add("opening");
           openButton.classList.add("hidden");
